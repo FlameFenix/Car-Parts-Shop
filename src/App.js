@@ -11,9 +11,10 @@ function App() {
 
   return (
     <div>
+      
       <Navbar />
+
       <div className="container">
-        <h1>Hello</h1>
         <div className="main">
           <Routes>
             <Route path="Market" element={<ListOfArticles />} />
