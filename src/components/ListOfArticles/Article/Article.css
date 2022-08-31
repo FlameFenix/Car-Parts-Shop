@@ -5,7 +5,11 @@
     margin-left: 20px;
 }
 
-.card {
+.article h2 {
+    font-size: 24px;
+}
+
+.article {
     display: grid;
     grid-template-rows: max-content 200px 1fr;
     border: 1px solid #7991d4;
@@ -15,21 +19,21 @@
     padding: 10px;
 }
 
-.card:hover {
+.article:hover {
     border: 1px solid #9baad1;
-    -webkit-box-shadow: 0px 0px 20px 1px #9BAAD1; 
+    -webkit-box-shadow: 0px 0px 20px 1px #9BAAD1;
     box-shadow: 0px 0px 20px 1px #9BAAD1;
 }
 
-.card img {
+.article img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
 
-.buy-btn {
-    width: 40%;
+.article .buy-btn {
+    width: 50%;
     margin: 0 auto;
     padding-top: 0px;
     margin-bottom: 15px;
@@ -37,10 +41,10 @@
     color: #fff;
     border: 1px solid #808080;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px 25px;
 }
 
-.buy-btn:hover {
+.article .buy-btn:hover {
     border: 1px solid #808080;
     border-radius: 10px;
     background-color: #8a46ae;

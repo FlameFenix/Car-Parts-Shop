@@ -1,7 +1,7 @@
 import './Article.css'
 export const Article = ({ Name, Price, Quantity, URL, Description }) => {
     return (
-        <article class="card">
+        <article class="article">
             <header>
                 <h2>{Name}</h2>
             </header>

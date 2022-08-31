@@ -26,7 +26,7 @@ export const ListOfArticles = () => {
     }
 
     return (
-        <div className="cards">
+        <div className="articles">
             {/* {articles.map(x => <li key={x.id}> {x.data.ArticleName.Price} </li>)} */}
             {articles.map(x => <Article key={x.id}  {...x.data.ArticleName} />)}
         </div>

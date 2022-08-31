@@ -5,6 +5,7 @@ import { ListOfArticles } from './components/ListOfArticles/ListOfArticles';
 import { CreateArticle } from './components/ListOfArticles/CreateArticle/CreateArticle';
 import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
+import { Home } from './components/Home/Home';
 
 
 function App() {
@@ -12,12 +13,13 @@ function App() {
 
   return (
     <div>
-      
+
       <Navbar />
 
       <div className="container">
         <div className="main">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="Market" element={<ListOfArticles />} />
             <Route path="Market/CreateArticle" element={<CreateArticle />} />
           </Routes>
@@ -25,6 +27,7 @@ function App() {
       </div>
 
       <Footer />
+
     </div>
   );
 }
