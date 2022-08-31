@@ -1,9 +1,10 @@
 import './App.css';
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { ListOfArticles } from './components/ListOfArticles/ListOfArticles';
 import { CreateArticle } from './components/ListOfArticles/CreateArticle/CreateArticle';
 import { Navbar } from './components/Navbar/Navbar';
+import { Footer } from './components/Footer/Footer';
 
 
 function App() {
@@ -18,10 +19,12 @@ function App() {
         <div className="main">
           <Routes>
             <Route path="Market" element={<ListOfArticles />} />
-            <Route path="CreateArticle" element={<CreateArticle />} />
+            <Route path="Market/CreateArticle" element={<CreateArticle />} />
           </Routes>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

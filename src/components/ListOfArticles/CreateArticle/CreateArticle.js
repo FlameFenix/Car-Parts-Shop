@@ -17,33 +17,33 @@ export const CreateArticle = () => {
         const { Name, URL, Description, Price } = Object.fromEntries(new FormData(e.target));
 
         const obj = {
-                Name,
-                URL,
-                Description,
-                Price
+            Name,
+            URL,
+            Description,
+            Price
         }
 
         const articles = collection(db, 'Articles')
-        addDoc(articles, { articleName: obj })
+        addDoc(articles, { ArticleName: obj })
             .then(res => console.log(res))
             .catch(error => alert(error));
     }
 
     return (
         <form className="create-article-form" onSubmit={createExample}>
-            <label htmlFor="Name">Name</label>
+            <label htmlFor="Name">Article Name</label>
             <input type="text" name="Name" id="Name" />
 
-            <label htmlFor="URL">URL</label>
+            <label htmlFor="URL">Image URL</label>
             <input type="text" name="URL" id="URL" />
 
             <label htmlFor="Description">Description </label>
             <input type="text" name="Description" id="Description" />
 
             <label htmlFor="Price">Price</label>
-            <input type="text" name="Price" id="Price" />
+            <input type="number" name="Price" id="Price" />
 
-            <input type="submit" value="Create Article" />
+            <input type="submit" className="submit-btn" value="Create Article" />
         </form>
     );
 }

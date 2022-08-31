@@ -15,6 +15,12 @@
     padding: 10px;
 }
 
+.card:hover {
+    border: 1px solid #9baad1;
+    -webkit-box-shadow: 0px 0px 20px 1px #9BAAD1; 
+    box-shadow: 0px 0px 20px 1px #9BAAD1;
+}
+
 .card img {
     object-fit: cover;
     width: 100%;
