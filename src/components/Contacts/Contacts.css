@@ -1,0 +1,135 @@
+@import url('https://use.fontawesome.com/releases/v6.2.0/css/all.css');
+
+.contacts h2 {
+    text-align: center;
+}
+
+.contacts p {
+    text-align: center;
+}
+
+.contacts {
+    padding-bottom: 100px;
+}
+
+.contacts h2 {
+    letter-spacing: 0.25rem;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.contacts-message {
+    padding-bottom: 20px;
+    text-shadow: 1px 1px black;
+    color: white;
+    letter-spacing: 0.25rem;
+}
+
+.contacts-details {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #AFE3C0;
+    border-radius: 10px;
+    padding: 25px;
+    -webkit-box-shadow: 0px 0px 20px 1px #9BAAD1;
+    box-shadow: 0px 0px 20px 1px #9BAAD1;
+}
+
+.contacts-form form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    line-height: 2rem;
+}
+
+.contacts-form form input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+
+.contacts-form form input::placeholder {
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.contacts-form form textarea {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 30px;
+}
+
+.contacts-form form textarea::placeholder {
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.submit-btn {
+    margin-top: 40px;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    border: 1px solid #AFE3C0;
+    color: #AFE3C0;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 6rem;
+    align-items: flex-start;
+    width: 300px;
+}
+
+.fa-phone {
+    color: rgb(0, 190, 0);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.fa-at {
+    color: black;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.fa-facebook {
+    color: #1877f2;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.fa-linkedin {
+    color: #1877f2;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.fa-location-dot {
+    color: rgb(255, 43, 43);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.separator {
+    border-bottom: 1px solid rebeccapurple;
+    margin-top: 125px;
+    margin-bottom: 20px;
+    width: 500px;
+}

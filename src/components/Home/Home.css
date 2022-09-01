@@ -5,6 +5,34 @@
     margin-bottom: 50px;
 }
 
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron .home-link {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+}
+
+.jumbotron .home-link:hover {
+    text-shadow: 2px 2px #ff0062;
+    text-decoration: none;
+}
+
+.jumbotron .my-4 {
+    background-color: rebeccapurple;
+}
+
+.jumbotron .btn.btn-primary.btn-lg {
+    padding: 7px 40px;
+    border-radius: 25px;
+}
+
+.jumbotron .btn.btn-primary.btn-lg:hover {
+
+}
+
 @media screen and (max-width: 600px) {
     .carousel-item .d-block.w-100 {
         height: 200px;

@@ -6,6 +6,7 @@ import { CreateArticle } from './components/ListOfArticles/CreateArticle/CreateA
 import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './components/Home/Home';
+import { Contacts } from './components/Contacts/Contacts';
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
         <div className="main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="Market" element={<ListOfArticles />} />
-            <Route path="Market/CreateArticle" element={<CreateArticle />} />
+            <Route path="/Market" element={<ListOfArticles />} />
+            <Route path="/Market/CreateArticle" element={<CreateArticle />} />
+            <Route path="/Contacts" element={<Contacts />} />
           </Routes>
         </div>
       </div>
