@@ -133,3 +133,25 @@
     margin-bottom: 20px;
     width: 500px;
 }
+
+@media screen and (max-width: 600px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .contacts-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts-form form {
+        margin: 0 auto;
+    }
+
+    .contacts-info {
+        margin: 0 auto;
+    }
+}
