@@ -134,6 +134,12 @@
     width: 500px;
 }
 
+.alert.alert-danger {
+    font-size: 13px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 600px) {
     .contacts {
         display: flex;
