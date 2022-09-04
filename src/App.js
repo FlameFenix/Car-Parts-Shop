@@ -7,6 +7,8 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './components/Home/Home';
 import { Contacts } from './components/Contacts/Contacts';
+import { Register } from './components/Register/Register';
+import { SideNav } from './components/SideNav/SideNav';
 
 
 function App() {
@@ -17,13 +19,17 @@ function App() {
 
       <Navbar />
 
+      <SideNav />
+
       <div className="container">
+
         <div className="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Market" element={<ListOfArticles />} />
             <Route path="/Market/CreateArticle" element={<CreateArticle />} />
             <Route path="/Contacts" element={<Contacts />} />
+            <Route path="/Register" element={<Register />} />
           </Routes>
         </div>
       </div>
