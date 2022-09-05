@@ -5,10 +5,17 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
     overflow-x: hidden;
     padding-top: 20px;
-    opacity: 75%;
+}
+
+.sidenav ul {
+    list-style: none;
+}
+
+.sidenav ul li a {
+    color: #fff;
+    text-shadow: 1px 1px black;
 }
 
 @media screen and (max-height: 450px) {

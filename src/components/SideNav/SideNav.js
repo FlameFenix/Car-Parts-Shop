@@ -7,6 +7,7 @@ export const SideNav = () => {
             <ul>
                 <li><Link to="/Login">Login</Link></li>
                 <li><Link to="/Register">Register</Link></li>
+                <li><Link to="/Logout">Logout</Link></li>
                 <li><Link to="/Market/CreateArticle">Create Article</Link></li>
             </ul>
         </div>

@@ -7,7 +7,7 @@ footer {
     opacity: 75%;
     color: #fff;
     text-align: center;
-    z-index: 0;
+    z-index: 2;
 }
 
 footer p {

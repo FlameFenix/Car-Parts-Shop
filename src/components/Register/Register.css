@@ -1,3 +1,9 @@
+.register h2 {
+    text-align: center;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
 .register-form {
     display: flex;
     flex-direction: column;

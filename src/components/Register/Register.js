@@ -8,7 +8,11 @@ export const Register = () => {
         e.preventDefault();
         const formData = new FormData(e.target);
 
-        const { email, password } = Object.fromEntries(formData);
+        const { email, password, repeatPassword } = Object.fromEntries(formData);
+        
+        if (password !== repeatPassword) {
+            return alert('Password and Repeat Password not match!');
+        }
 
         try {
             const user = createUserWithEmailAndPassword(
@@ -26,12 +30,16 @@ export const Register = () => {
 
     return (
         <div className="register">
+            <h2>Register</h2>
             <form onSubmit={registerHandler} className="register-form">
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" />
 
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" />
+
+                <label htmlFor="repeatPassword">Repeat Password</label>
+                <input type="password" name="repeatPassword" />
 
                 <input type="submit" className="submit-btn" value="Register" />
             </form>
