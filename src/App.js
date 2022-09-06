@@ -10,6 +10,7 @@ import { Contacts } from './components/Contacts/Contacts';
 import { Register } from './components/Register/Register';
 import { SideNav } from './components/SideNav/SideNav';
 import { Logout } from './components/Logout/Logout';
+import { Login } from './components/Login/Login';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/Market/CreateArticle" element={<CreateArticle />} />
             <Route path="/Contacts" element={<Contacts />} />
             <Route path="/Register" element={<Register />} />
+            <Route path="/Login" element={<Login />} />
             <Route path="/Logout" element={<Logout />} />
           </Routes>
         </div>
