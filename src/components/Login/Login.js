@@ -12,7 +12,8 @@ export const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(res => {
                 console.log(res);
-            });
+            })
+            .catch(error => console.log(error.message));
     }
 
     return (
