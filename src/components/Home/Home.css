@@ -29,9 +29,7 @@
     border-radius: 25px;
 }
 
-.jumbotron .btn.btn-primary.btn-lg:hover {
-
-}
+.jumbotron .btn.btn-primary.btn-lg:hover {}
 
 @media screen and (max-width: 600px) {
     .carousel-item .d-block.w-100 {
@@ -42,4 +40,35 @@
     .home-page {
         margin-bottom: 180px;
     }
+}
+
+.home-articles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.home-article {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.home-article h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.home-article img {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+}
+
+.home-article img:hover {
+    cursor: pointer;
 }

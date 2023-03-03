@@ -4,7 +4,7 @@ import { db } from '../../services/dbInit';
 import { Article } from './Article/Article';
 import './ListOfArticles.css'
 
-export const ListOfArticles = () => {
+export const ListOfArticles = ({onAddHandler}) => {
 
     const [articles, setArticles] = useState([]);
 
@@ -21,14 +21,13 @@ export const ListOfArticles = () => {
                 id: x.id,
             }))
             setArticles(elements);
-            console.log(elements);
         }).catch(err => console.log(err));
     }
 
     return (
         <div className="articles">
             {/* {articles.map(x => <li key={x.id}> {x.data.ArticleName.Price} </li>)} */}
-            {articles.map(x => <Article key={x.id}  {...x.data.ArticleName} />)}
+            {articles.map(x => <Article key={x.id}  id={x.id} {...x.data.ArticleName} />)}
         </div>
     );
 }

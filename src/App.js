@@ -15,46 +15,74 @@ import { Logout } from './components/Logout/Logout';
 import { Login } from './components/Login/Login';
 
 import { useState } from 'react';
+import { Cart } from './components/Cart/Cart';
+import { CartProvider, useCart } from 'react-use-cart';
+import { CartContext } from './contexts/cartContext';
 
 
 function App() {
 
+  const [cartItems, setCartItems] = useState([]);
+
   const [user, setUser] = useState({});
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const { addItem } = useCart();
 
   const onLoginHandler = (email) => {
     localStorage.setItem('user', JSON.stringify(email));
+    setIsAuthenticated(true);
   }
 
   const onLogoutHandler = () => {
     localStorage.removeItem('user');
+    setIsAuthenticated(false);
+  }
+
+  const onAddHandler = (item) => {
+
+    console.log(item);
+    setCartItems(state => [
+      ...state,
+      item
+    ])
+
+    addItem(item)
   }
 
   return (
     <div>
-      <AuthContext.Provider value={{ user, onLoginHandler, onLogoutHandler }}>
+      <CartContext.Provider value={{ cartItems, onAddHandler }}>
+        <CartProvider>
 
-        <Navbar />
+          <AuthContext.Provider value={{ user, onLoginHandler, onLogoutHandler, isAuthenticated }}>
 
-        <SideNav />
+            <Navbar />
+{/* 
+            <SideNav /> */}
 
-        <div className="container">
+            <div className="container">
 
-          <div className="main">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Market" element={<ListOfArticles />} />
-              <Route path="/Market/CreateArticle" element={<CreateArticle />} />
-              <Route path="/Contacts" element={<Contacts />} />
-              <Route path="/Register" element={<Register />} />
-              <Route path="/Login" element={<Login />} />
-              <Route path="/Logout" element={<Logout />} />
-            </Routes>
-          </div>
-        </div>
+              <div className="main">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Market" element={<ListOfArticles />} />
+                  <Route path="/Market/CreateArticle" element={<CreateArticle />} />
+                  <Route path="/Contacts" element={<Contacts />} />
+                  <Route path="/Register" element={<Register />} />
+                  <Route path="/Login" element={<Login />} />
+                  <Route path="/Logout" element={<Logout />} />
+                  <Route path="/Cart" element={<Cart />} />
+                </Routes>
+              </div>
+            </div>
 
-        <Footer />
+            <Footer />
 
-      </AuthContext.Provider>
+          </AuthContext.Provider>
+
+        </CartProvider>
+      </CartContext.Provider>
     </div>
   );
 }
